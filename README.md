@@ -10,7 +10,7 @@ CryptoSim is a Java-based application that offers various encryption algorithms 
 ## Installation
 1. **Clone the repository**:
 
-```
+```bash
   git clone https://github.com/yourusername/cryptosim.git
   cd cryptosim
 ```
@@ -19,13 +19,13 @@ CryptoSim is a Java-based application that offers various encryption algorithms 
 
   Ensure you have Java Development Kit (JDK) installed, preferably JDK 8 or higher.
 
-```
+```bash
   javac -cp ".:path/to/bouncycastle.jar" com/cryptosim/*.java
 ```
 
 3. **Run the application**:
 
-```
+```bash
   java -cp ".:path/to/bouncycastle.jar" com.cryptosim.Main
 ```
 
@@ -62,7 +62,7 @@ The Rail Fence cipher is a form of transposition cipher that derives its name fr
 
 **Method Signature**:
 
-```
+```java
 public static String RailFence(String text, int key)
 ```
 
@@ -71,7 +71,7 @@ Myszkowski Transposition is a variant of columnar transposition where repeated k
 
 **Method Signature**:
 
-```
+```java
 public static String Myszkowski(String text, String key)
 ```
 
@@ -80,7 +80,7 @@ The Playfair cipher is a digraph substitution cipher, encrypting pairs of letter
 
 **Method Signature**:
 
-```
+```java
 public static String Playfair(String text, String key)
 ```
 
@@ -89,7 +89,7 @@ User authentication is handled using X.509 certificates. Users must provide thei
 
 **Method Signature**:
 
-```
+```java
 public boolean authenticate(String certPath, String username, String password) throws Exception
 ```
 
@@ -98,7 +98,7 @@ The application can generate a Certificate Authority (CA) and user certificates 
 
 **Method Signature**:
 
-```
+```java
 public static void generateCA() throws Exception
 ```
 
@@ -107,7 +107,7 @@ Simulation history is saved encrypted and can be retrieved to review past simula
 
 **Method Signature**:
 
-```
+```java
 public static void saveSimulation(String username, String text, String algorithm, String key, String cipher) throws Exception
 public static void readSimulations(String username) throws Exception
 ```
@@ -117,7 +117,7 @@ The project includes JUnit tests for the encryption algorithms and authenticatio
 
 **Run Tests**:
 
-```
+```bash
 java -cp ".:path/to/junit.jar:path/to/bouncycastle.jar" org.junit.runner.JUnitCore com.cryptosim.AlgorithmsTest
 java -cp ".:path/to/junit.jar:path/to/bouncycastle.jar" org.junit.runner.JUnitCore com.cryptosim.AuthentificationTest
 ```
